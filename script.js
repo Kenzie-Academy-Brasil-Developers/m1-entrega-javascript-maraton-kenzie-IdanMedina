@@ -2,7 +2,7 @@
 
 function position(array){
     let finalArray=[]
-    let daniChamp = "Daniel é o vencedor"
+    let daniChamp = ": Daniel é o vencedor"
     let podium = "Este é o pódio:"
     if (array.indexOf(' Daniel') == 2) {
         finalArray.push(array[0])
@@ -15,15 +15,17 @@ function position(array){
         finalArray.push(array[1])
         finalArray.push(array[0])
         finalArray.push(array[2])
-        return daniChamp
+        let result = finalArray.join()
+        return result.concat(daniChamp)
     }
     if (array.indexOf(' Daniel') == 0) {
-        return daniChamp
+        let result2 = array.join()
+        return result2.concat(daniChamp)
     }
 }
 console.log(position(array))
 
-/*let array = ['Rafael','Manoel','Daniel']
+/*let array = [' Rafael',' Manoel',' Daniel']
 function positions(array){
     let grid = []
     let posDaniel = 0
